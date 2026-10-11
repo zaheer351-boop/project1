@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dr. Zahir Ahmed Shaikh</title>
+<meta name="description" content="Dr. Zahir Ahmed Shaikh — Assistant Professor, School of Commerce and Management Studies, Sandip University, Nashik.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  :root {
+    --bg: #F7F5F0; --surface: #FFFFFF; --ink: #1C1E22; --ink-soft: #565B64; --ink-faint: #8A8E96;
+    --line: #E2DED2; --line-soft: #EDEAE0; --accent: #3B5943; --accent-soft: #E1E7DE;
+    --accent-2: #AD5A2B; --accent-2-soft: #F1E1D3;
+    --c-burnout: #2C4257; --c-cyber: #AD5A2B; --c-stress: #5C7A99; --c-career: #71466E; --c-csr: #3B5943;
+    --sidebar-w: 264px; --radius: 10px;
+    --shadow: 0 1px 2px rgba(28,30,34,0.04), 0 8px 24px rgba(28,30,34,0.05);
+    --serif: "Source Serif 4", Georgia, serif; --sans: Inter, -apple-system, BlinkMacSystemFont, sans-serif; --mono: "IBM Plex Mono", monospace;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; font-family: var(--sans); color: var(--ink); background: var(--bg); line-height: 1.6; }
+  a { color: var(--accent); }
+  h1, h2, h3, h4 { font-family: var(--serif); font-weight: 600; margin: 0; }
+
+  /* Sidebar */
+  .sidebar { position: fixed; inset: 0 auto 0 0; width: var(--sidebar-w); background: var(--surface); border-right: 1px solid var(--line); padding: 24px 20px; display: flex; flex-direction: column; z-index: 5; }
+  .me { display: flex; gap: 10px; align-items: center; margin-bottom: 32px; text-decoration: none; color: var(--ink); }
+  .me img { width: 32px; height: 32px; border-radius: 50%; object-fit: cover; object-position: center 20%; }
+  .me strong { display: block; font-family: var(--serif); font-size: 14px; }
+  .me span { font-size: 11px; color: var(--ink-faint); }
+  .nav a { display: block; padding: 6px 8px; margin: 2px 0; border-radius: 6px; color: var(--ink-soft); text-decoration: none; font-size: 14px; }
+  .nav a:hover, .nav a.active { background: var(--accent-soft); color: var(--accent); }
+  .side-foot { margin-top: auto; font-size: 13px; }
+  .side-foot .mail { font-family: var(--mono); font-size: 12px; color: var(--ink-soft); }
+  .side-foot .addr { border-top: 1px solid var(--line); margin-top: 14px; padding-top: 12px; font-size: 11px; color: var(--ink-faint); }
+  .copy-btn { font-family: var(--mono); font-size: 11px; background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 4px 8px; cursor: pointer; color: var(--ink-soft); margin: 8px 0; }
+
+  main { margin-left: var(--sidebar-w); }
+  .wrap { max-width: 860px; padding: 0 56px; }
+  section { padding: 56px 0; border-top: 1px solid var(--line); }
+
+  /* Hero */
+  .hero { position: relative; overflow: hidden; padding: 56px 0 48px; border-top: none; }
+  .hero svg.net { position: absolute; top: -20px; right: 0; width: 520px; height: 360px; opacity: .55; pointer-events: none; }
+  .hero .wrap { position: relative; }
+  .eyebrow { font-family: var(--mono); font-size: 11.5px; letter-spacing: 1px; color: var(--ink-faint); text-transform: uppercase; max-width: 420px; }
+  .hero h1 { font-size: 45px; margin: 14px 0 12px; line-height: 1.1; }
+  .role { color: var(--ink-soft); font-size: 15px; padding-bottom: 20px; border-bottom: 1px solid var(--line); max-width: 400px; }
+  .role b { color: var(--ink); font-weight: 400; }
+  .portrait { position: absolute; right: 56px; top: 0; width: 132px; height: 132px; border-radius: 50%; border: 4px solid var(--surface); box-shadow: var(--shadow); object-fit: cover; object-position: center 20%; }
+  .tagline { font-family: var(--serif); font-size: 18px; border-left: 3px solid var(--accent-2); padding-left: 16px; margin: 24px 0; max-width: 480px; }
+  .cta { display: flex; gap: 10px; flex-wrap: wrap; }
+  .btn { padding: 9px 14px; border-radius: 6px; font-size: 14px; font-weight: 500; text-decoration: none; border: 1px solid var(--line); background: var(--surface); color: var(--ink); cursor: pointer; font-family: var(--sans); }
+  .btn.primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+  .btn.mono { font-family: var(--mono); font-size: 11px; }
+
+  .kicker { display: block; width: 28px; height: 3px; background: var(--accent-2); margin-bottom: 18px; }
+  section h2 { font-size: 32px; margin-bottom: 16px; }
+  .lead { color: var(--ink-soft); }
+  .facts { display: grid; grid-template-columns: 1fr 1fr; gap: 20px 32px; margin-top: 28px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; }
+  .facts dt { font-family: var(--mono); font-size: 11px; letter-spacing: 1px; color: var(--ink-faint); }
+  .facts dd { margin: 4px 0 0; font-size: 14px; }
+
+  /* Research */
+  .pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 20px 0 24px; }
+  .pill { display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); font-size: 13px; color: var(--ink-soft); text-decoration: none; }
+  .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--cat-color, var(--ink-faint)); flex: none; }
+  .card { background: var(--surface); border: 1px solid var(--line); border-left: 3px solid var(--cat-color); border-radius: var(--radius); margin-bottom: 12px; box-shadow: var(--shadow); }
+  .card summary { list-style: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; padding: 16px 20px; gap: 12px; }
+  .card summary::-webkit-details-marker { display: none; }
+  .card summary div { display: flex; align-items: center; gap: 10px; }
+  .card h3 { font-size: 17px; }
+  .chev { width: 18px; height: 18px; color: var(--ink-faint); transition: transform .2s; flex: none; }
+  .card[open] .chev { transform: rotate(180deg); }
+  .card .body { padding: 0 20px 20px; }
+  .blurb { color: var(--ink-soft); font-size: 14.5px; margin-top: 0; }
+  .pubs { list-style: none; padding: 0; margin: 0; }
+  .pubs li { padding: 10px 0; border-top: 1px solid var(--line-soft); }
+  .pubs .t { display: block; font-weight: 500; font-size: 14.5px; }
+  .pubs .m { display: block; font-size: 13px; color: var(--ink-soft); }
+  .badge { display: inline-block; font-family: var(--mono); font-size: 10.5px; letter-spacing: .5px; background: var(--accent-2-soft); color: var(--accent-2); border-radius: 4px; padding: 1px 6px; margin-left: 6px; vertical-align: 2px; }
+
+  .other { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 20px; }
+  .other .box { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px 20px; }
+  .other .t { font-family: var(--serif); font-weight: 600; font-size: 16px; display: block; margin: 4px 0; }
+  .other .m { font-size: 13px; color: var(--ink-soft); }
+
+  /* Experience timeline */
+  .timeline { list-style: none; padding: 0; margin: 24px 0 0; position: relative; }
+  .timeline::before { content: ""; position: absolute; left: 5px; top: 8px; bottom: 8px; width: 1px; background: var(--line); }
+  .timeline li { position: relative; padding: 0 0 28px 30px; }
+  .timeline li::before { content: ""; position: absolute; left: 0; top: 7px; width: 11px; height: 11px; border-radius: 50%; background: var(--surface); border: 2px solid var(--accent); }
+  .timeline li.now::before { background: var(--accent); }
+  .when { font-family: var(--mono); font-size: 11.5px; letter-spacing: .5px; color: var(--ink-faint); }
+  .timeline h3 { font-size: 18px; margin: 2px 0; }
+  .org { font-size: 14px; color: var(--ink-soft); }
+  .timeline p { font-size: 14.5px; margin: 8px 0 0; }
+
+  /* Teaching */
+  .label { font-family: var(--mono); font-size: 11px; letter-spacing: 1px; color: var(--ink-faint); margin: 24px 0 8px; }
+  .current { background: var(--accent-soft); border-radius: var(--radius); padding: 16px 20px; }
+  .current p { margin: 0 0 4px; font-weight: 600; }
+  .current span { font-size: 14px; color: var(--ink-soft); }
+  .tags { display: flex; flex-wrap: wrap; gap: 8px; }
+  .tags span { background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 4px 10px; font-size: 13px; color: var(--ink-soft); }
+
+  /* Contact */
+  .contact { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; background: var(--ink); color: #F2EFE7; border-radius: var(--radius); padding: 28px; margin-top: 20px; }
+  .contact .label { color: #C3CCC3; margin-top: 0; }
+  .contact a { color: #F2EFE7; }
+  .contact .mono { font-family: var(--mono); font-size: 13px; }
+  footer { padding: 24px 0 40px; font-size: 12px; color: var(--ink-faint); }
+
+  @media (max-width: 860px) {
+    .sidebar { position: static; width: auto; border-right: none; border-bottom: 1px solid var(--line); padding: 14px 16px; }
+    .me { margin-bottom: 8px; }
+    .nav { display: flex; flex-wrap: wrap; gap: 2px; }
+    .side-foot { display: none; }
+    main { margin-left: 0; }
+    .wrap { padding: 0 16px; }
+    .portrait { position: static; width: 104px; height: 104px; margin-bottom: 8px; }
+    .hero svg.net { width: 320px; }
+    .hero h1 { font-size: 34px; }
+    .facts, .contact, .other { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<aside class="sidebar">
+  <a class="me" href="#top"><img src="photo.png" alt=""><div><strong>Dr. Zahir Ahmed Shaikh</strong><span>Sandip University</span></div></a>
+  <nav class="nav">
+    <a href="#about">About</a><a href="#research">Research</a><a href="#experience">Experience</a><a href="#teaching">Teaching</a><a href="#contact">Contact</a>
+  </nav>
+  <div class="side-foot">
+    <div class="mail">zaheer351 [at] gmail [dot] com</div>
+    <button class="copy-btn" data-copy>Copy email</button>
+    <div class="addr">School of Commerce and Management Studies,<br>Sandip University · Nashik, Maharashtra</div>
+  </div>
+</aside>
+
+<main id="top">
+  <section class="hero">
+    <svg class="net" viewBox="0 0 520 360" aria-hidden="true" fill="none" stroke="#3B5943" stroke-width="1">
+      <g id="edges"></g><g id="nodes" fill="#3B5943" stroke="none"></g>
+    </svg>
+    <div class="wrap">
+      <img class="portrait" src="photo.png" alt="Dr. Zahir Ahmed Shaikh">
+      <div class="eyebrow">Human Resource Management · Organizational Behavior · Workplace Well-being</div>
+      <h1>Dr. Zahir Ahmed Shaikh</h1>
+      <div class="role"><b>Assistant Professor</b>, School of Commerce and Management Studies · Sandip University, Nashik</div>
+      <p class="tagline">Researching burnout, stress, leadership and employee engagement, and how digital behaviour at work shapes well-being in healthcare and higher education.</p>
+      <div class="cta">
+        <a class="btn primary" href="#research">See research →</a>
+        <a class="btn" href="Zahir-Ahmed-Shaikh-CV.pdf" download>Download CV</a>
+        <button class="btn mono" data-copy>Copy email</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="about"><div class="wrap">
+    <span class="kicker"></span>
+    <h2>About</h2>
+    <p>Dr. Zahir Ahmed Shaikh is an Assistant Professor in the School of Commerce and Management Studies at Sandip University, Nashik, where he has taught since November 2024. He teaches undergraduate and postgraduate courses in commerce and management, mentors students on projects and careers, and contributes to accreditation (NAAC/AQAR) and institutional development.</p>
+    <p>He has more than a decade of teaching experience. From 2011 to 2017 he taught BBA and BCA programmes at K. K. Wagh Arts, Commerce, Science and Computer Science College, Nashik, first as a Lecturer and then as a University of Pune–approved Assistant Professor. He then taught Machine Learning and Data Science fundamentals at The Standard School of Machine Learning in Mumbai.</p>
+    <p>His research spans human resource management, organizational behavior, leadership, healthcare management and workplace psychology. He focuses on burnout, stress, leadership styles, employee engagement, cyberloafing and corporate social responsibility. He earned his Ph.D. in Management from Lovely Professional University in 2025.</p>
+    <dl class="facts">
+      <div><dt>EDUCATION</dt><dd>Ph.D. in Management, Lovely Professional University, Punjab (2019–2025)</dd></div>
+      <div><dt>EARLIER DEGREES</dt><dd>M.B.A. (HRM), North Maharashtra University, Jalgaon (2008–2010) · B.Com. (Business Administration), University of Pune (2005–2008)</dd></div>
+      <div><dt>AFFILIATION</dt><dd>School of Commerce and Management Studies, Sandip University, Nashik, Maharashtra</dd></div>
+      <div><dt>PREVIOUSLY</dt><dd>K. K. Wagh College, Nashik (2011–2017) · The Standard School of Machine Learning, Mumbai (2017–2018)</dd></div>
+    </dl>
+  </div></section>
+
+  <section id="research"><div class="wrap">
+    <span class="kicker"></span>
+    <h2>Research</h2>
+    <p class="lead">Five research areas, each with its papers and conference presentations. Click a heading to open or close it.</p>
+    <div class="pills">
+      <a class="pill" href="#research">All areas</a>
+      <a class="pill" href="#cat-burnout" style="--cat-color:var(--c-burnout)"><span class="dot"></span>Burnout &amp; leadership</a>
+      <a class="pill" href="#cat-cyber" style="--cat-color:var(--c-cyber)"><span class="dot"></span>Cyberloafing &amp; engagement</a>
+      <a class="pill" href="#cat-stress" style="--cat-color:var(--c-stress)"><span class="dot"></span>Stress &amp; gender</a>
+      <a class="pill" href="#cat-career" style="--cat-color:var(--c-career)"><span class="dot"></span>Career development</a>
+      <a class="pill" href="#cat-csr" style="--cat-color:var(--c-csr)"><span class="dot"></span>CSR &amp; information systems</a>
+    </div>
+    <div id="researchContainer"></div>
+
+    <div class="label">OTHER PUBLICATIONS</div>
+    <div class="other">
+      <div class="box">
+        <div class="when">BOOK · 2014</div>
+        <span class="t">Personality Development</span>
+        <div class="m">Published by University of Pune for the B.B.A. Semester III curriculum · ISBN 978-93-5163-142-2</div>
+      </div>
+      <div class="box">
+        <div class="when">COPYRIGHT · JULY 2023</div>
+        <span class="t">Impact of Cyberloafing on Burnout and Work Engagement of University Faculty</span>
+        <div class="m">Registration No. L-134240/2023 · Copyright Office, Government of India</div>
+      </div>
+    </div>
+  </div></section>
+
+  <section id="experience"><div class="wrap">
+    <span class="kicker"></span>
+    <h2>Experience</h2>
+    <ul class="timeline">
+      <li class="now">
+        <div class="when">NOV 2024 – PRESENT</div>
+        <h3>Assistant Professor</h3>
+        <div class="org">School of Commerce and Management Studies, Sandip University · Nashik</div>
+        <p>Teaches UG and PG commerce and management courses using outcome-based, learner-centred methods. Designs course content and assessments, mentors student research, and contributes to NAAC/AQAR accreditation and faculty development.</p>
+      </li>
+      <li>
+        <div class="when">2017 – 2018</div>
+        <h3>Lecturer</h3>
+        <div class="org">The Standard School of Machine Learning (THESSML) · Mumbai</div>
+        <p>Taught the fundamentals of Machine Learning and Data Science through lectures, practical demonstrations and hands-on sessions. Guided student mini-projects and helped build the institution's early teaching framework.</p>
+      </li>
+      <li>
+        <div class="when">2013 – 2017</div>
+        <h3>Assistant Professor (University Approved)</h3>
+        <div class="org">K. K. Wagh Arts, Commerce, Science and Computer Science College · Nashik · Approved by University of Pune</div>
+        <p>Taught B.B.A. and B.C.A. courses under the University of Pune curriculum. Ran internal assessments and practical examinations, mentored students, and took part in academic audits.</p>
+      </li>
+      <li>
+        <div class="when">JUL 2011 – MAY 2013</div>
+        <h3>Lecturer</h3>
+        <div class="org">K. K. Wagh Arts, Commerce, Science and Computer Science College · Nashik</div>
+        <p>Taught undergraduate Commerce, Management and Computer Applications courses, with tutorials, practicals, assessments, seminars and skill-development activities.</p>
+      </li>
+    </ul>
+  </div></section>
+
+  <section id="teaching"><div class="wrap">
+    <span class="kicker"></span>
+    <h2>Teaching</h2>
+    <div class="label">CURRENTLY</div>
+    <div class="current">
+      <p>Sandip University, Nashik</p>
+      <span>Undergraduate and postgraduate courses in Commerce and Management</span>
+    </div>
+    <div class="label">PROGRAMMES &amp; SUBJECT AREAS TAUGHT</div>
+    <div class="tags" id="taught"></div>
+  </div></section>
+
+  <section id="contact"><div class="wrap">
+    <span class="kicker"></span>
+    <h2>Get in touch</h2>
+    <div class="contact">
+      <div><div class="label">EMAIL</div><div class="mono">zaheer351 [at] gmail [dot] com</div><button class="copy-btn" data-copy>Copy email</button></div>
+      <div><div class="label">PHONE</div><div class="mono">+91-9890502933</div></div>
+      <div><div class="label">AFFILIATION</div>School of Commerce and Management Studies<br>Sandip University, Nashik, Maharashtra, India</div>
+    </div>
+    <footer>© 2026 Dr. Zahir Ahmed Shaikh.</footer>
+  </div></section>
+</main>
+
+<script>
+const research = [
+  { id: "cat-burnout", color: "var(--c-burnout)", title: "Burnout and Leadership in Healthcare", open: true,
+    blurb: "How leadership styles relate to burnout among healthcare professionals, drawing on global research to inform healthcare leadership and policy.",
+    pubs: [
+      ["Burnout and Leadership Style in the Health Care Sector: A Systematic Literature Review", "Presented at INCONSYM 2024, 30–31 January 2024, Symbiosis Institute of Business Management, Hyderabad", "Accepted · The Learning Organization (Q2)"],
+    ]},
+  { id: "cat-cyber", color: "var(--c-cyber)", title: "Cyberloafing and Work Engagement in Higher Education",
+    blurb: "Cyberloafing among university teachers, as both a way of coping with stress and a risk to productivity, and its links to burnout and work engagement.",
+    pubs: [
+      ["A Review Study on the Role of Cyberloafing on Burnout and Work Engagement of Teachers in Higher Education Institutions (HEIs)", "Presented at Rethinking Business: Designing Strategies in the Age of Disruptions, 19 December 2020, Lovely Professional University, Punjab"],
+      ["Impact of Cyberloafing on Burnout and Work Engagement of University Faculty", "Copyright registration L-134240/2023, July 2023 · Copyright Office, Government of India"],
+    ]},
+  { id: "cat-stress", color: "var(--c-stress)", title: "Occupational Stress and Gender",
+    blurb: "Compares the stressors faced by women professionals in different sectors, and argues for gender-sensitive organizational policies and support.",
+    pubs: [
+      ["A Comparative Study on the Role of Stress on Working Women in Medical and Service Sectors", "Presented at the International Conference on Emerging Trends in Business Paradigm, April 2016, Pune"],
+    ]},
+  { id: "cat-career", color: "var(--c-career)", title: "Career Development and Values-based Management",
+    blurb: "Combines management practice with values-based leadership, looking at how structured career development affects motivation and long-term organizational sustainability.",
+    pubs: [
+      ["Efficacy of Career Development Management (CDM) in India", "Proceedings of the International Conference on Spirituality and Management, 3–5 January 2016, Indian Institute of Management Bangalore"],
+    ]},
+  { id: "cat-csr", color: "var(--c-csr)", title: "CSR, Sustainability and Information Systems",
+    blurb: "Earlier work on corporate ethics and digital HR: CSR as a strategic priority rather than a compliance exercise, and HR information systems as a way to improve efficiency and decision-making.",
+    pubs: [
+      ["Corporate Social Responsibility: The Era of Today's Business", "Proceedings of the International Conference on Innovative Advances and Challenges in Management and Commerce, 18–19 December 2014, Amity College, Noida"],
+      ["Human Resource Information System", "Proceedings of Advancement in Management Theories & Practices, 17 October 2014, Apeejay School of Management, New Delhi"],
+      ["Study of Emission Norms of India and Europe", "The Research Journal of the Ness Wadia College of Commerce, January 2011, Pune"],
+    ]},
+];
+
+const taught = ["Bachelor of Business Administration (B.B.A.)", "Bachelor of Computer Applications (B.C.A.)", "Commerce", "Management", "Human Resource Management", "Personality Development", "Machine Learning Fundamentals", "Data Science Fundamentals"];
+
+const esc = s => s.replace(/[&<>]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));
+const chev = '<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>';
+document.getElementById("researchContainer").innerHTML = research.map(r => `
+  <details class="card" id="${r.id}" style="--cat-color:${r.color}" ${r.open ? "open" : ""}>
+    <summary><div><span class="dot"></span><h3>${esc(r.title)}</h3></div>${chev}</summary>
+    <div class="body"><p class="blurb">${esc(r.blurb)}</p>
+      <ul class="pubs">${r.pubs.map(([t, m, b]) => `<li><span class="t">${esc(t)}${b ? `<span class="badge">${esc(b)}</span>` : ""}</span><span class="m">${esc(m)}</span></li>`).join("")}</ul>
+    </div>
+  </details>`).join("");
+document.getElementById("taught").innerHTML = taught.map(c => `<span>${esc(c)}</span>`).join("");
+
+// Pills open the target card
+document.querySelectorAll(".pill").forEach(p => p.addEventListener("click", () => {
+  const id = p.getAttribute("href").slice(1);
+  document.querySelectorAll(".card").forEach(c => { if (id === "research" || c.id === id) c.open = true; });
+}));
+
+// Copy email
+document.querySelectorAll("[data-copy]").forEach(b => b.addEventListener("click", async () => {
+  try { await navigator.clipboard.writeText("zaheer351@gmail.com"); const o = b.textContent; b.textContent = "Copied!"; setTimeout(() => b.textContent = o, 1400); } catch (e) {}
+}));
+
+// Active nav on scroll
+const links = [...document.querySelectorAll(".nav a")];
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) links.forEach(l => l.classList.toggle("active", l.getAttribute("href") === "#" + e.target.id)); }), { rootMargin: "-40% 0px -55% 0px" });
+["about","research","experience","teaching","contact"].forEach(id => io.observe(document.getElementById(id)));
+
+// Decorative network graph in the hero
+const pts = [[60,40],[180,20],[300,0],[420,60],[500,120],[260,110],[150,130],[380,180],[230,200],[460,240],[320,270]];
+const edges = [[0,1],[1,2],[2,3],[3,4],[1,5],[5,3],[0,6],[6,5],[5,7],[7,4],[6,8],[8,7],[7,9],[8,10],[10,9],[3,7]];
+document.getElementById("edges").innerHTML = edges.map(([a,b]) => `<line x1="${pts[a][0]}" y1="${pts[a][1]}" x2="${pts[b][0]}" y2="${pts[b][1]}"/>`).join("");
+document.getElementById("nodes").innerHTML = pts.map(([x,y],i) => `<circle cx="${x}" cy="${y}" r="${i % 3 ? 3.5 : 5}"/>`).join("");
+</script>
+</body>
+</html>
